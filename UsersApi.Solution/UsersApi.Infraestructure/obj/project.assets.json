@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "UsersApi.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "UsersApi.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UsersApi.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UsersApi.Application.dll": {}
+        }
+      },
+      "UsersApi.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UsersApi.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UsersApi.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "UsersApi.Application/1.0.0": {
+      "type": "project",
+      "path": "../UsersApi.Application/UsersApi.Application.csproj",
+      "msbuildProject": "../UsersApi.Application/UsersApi.Application.csproj"
+    },
+    "UsersApi.Domain/1.0.0": {
+      "type": "project",
+      "path": "../UsersApi.Domain/UsersApi.Domain.csproj",
+      "msbuildProject": "../UsersApi.Domain/UsersApi.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "UsersApi.Application >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\arr_1\\.nuget\\packages\\": {},
@@ -38,7 +75,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Csharp projects\\UsersApi\\UsersApi.Solution\\UsersApi.Application\\UsersApi.Application.csproj": {
+              "projectPath": "C:\\Csharp projects\\UsersApi\\UsersApi.Solution\\UsersApi.Application\\UsersApi.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
